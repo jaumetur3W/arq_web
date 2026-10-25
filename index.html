@@ -3,48 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FORMA / ESPACIO — Arte · Arquitectura · Investigación</title>
-  <meta name="description" content="Estudio independiente de prácticas espaciales contemporáneas. Arte, arquitectura, diseño de espacios e investigación visual.">
-  <meta property="og:title" content="FORMA / ESPACIO — Arte · Arquitectura · Investigación">
-  <meta property="og:description" content="Estudio independiente que explora la relación entre espacio, materia y percepción.">
+  <title>ARQstudio — Arte · Arquitectura · Investigación</title>
+  <meta name="description" content="ARQstudio es un estudio independiente de prácticas espaciales contemporáneas. Arte, arquitectura, diseño de espacios e investigación visual.">
+  <link rel="canonical" href="https://jaumetur3w.github.io/arq_web/">
+  <meta property="og:title" content="ARQstudio — Arte · Arquitectura · Investigación">
+  <meta property="og:description" content="ARQstudio explora la relación entre espacio, materia y percepción desde una práctica independiente.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <meta property="og:site_name" content="ARQstudio">
+  <meta property="og:url" content="https://jaumetur3w.github.io/arq_web/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
+  <meta property="og:image:alt" content="Edificio de arquitectura contemporánea con formas geométricas angulares">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ARQstudio — Arte · Arquitectura · Investigación">
+  <meta name="twitter:description" content="ARQstudio explora la relación entre espacio, materia y percepción desde una práctica independiente.">
+  <meta name="twitter:url" content="https://jaumetur3w.github.io/arq_web/">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
   <link rel="stylesheet" href="assets/css/style.css">
   <noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
 
+  <a class="skip-link" href="#mainContent">Saltar al contenido</a>
+
   <!-- Progress Bar -->
-  <div class="progress-bar" id="progressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar" id="progressBar" role="progressbar" aria-label="Progreso de lectura" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 
   <!-- ========== NAVIGATION ========== -->
   <header class="nav" id="mainNav">
     <div class="nav__inner">
-      <a href="#" class="nav__logo" aria-label="FORMA / ESPACIO — Inicio">FORMA <span class="nav__logo-slash">/</span> ESPACIO</a>
+      <a href="#hero" class="nav__logo" aria-label="ARQstudio — Inicio"><span class="nav__logo-arq">ARQ</span><span class="nav__logo-studio">studio</span></a>
       <nav class="nav__links" aria-label="Navegación principal">
         <a href="#projects" class="nav__link" data-nav="projects">Proyectos</a>
         <a href="#studio" class="nav__link" data-nav="studio">Estudio</a>
         <a href="#archive" class="nav__link" data-nav="archive">Investigación</a>
-        <a href="#contact" class="nav__link" data-nav="contact">Diario</a>
+        <a href="#contact" class="nav__link" data-nav="contact">Contacto</a>
         <a href="#contact" class="nav__cta">Hablemos</a>
-        <button class="nav__lang" aria-label="Cambiar idioma">ES <span>/ EN</span></button>
+        <span class="nav__lang" lang="es" aria-label="Idioma: español">ES</span>
       </nav>
-      <button class="nav__burger" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+      <button class="nav__burger" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span>
       </button>
     </div>
   </header>
 
   <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menú de navegación">
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menú de navegación principal" aria-modal="true" aria-hidden="true" inert>
     <nav class="mobile-menu__nav">
       <a href="#projects" class="mobile-menu__link">Proyectos</a>
       <a href="#studio" class="mobile-menu__link">Estudio</a>
       <a href="#archive" class="mobile-menu__link">Investigación</a>
-      <a href="#contact" class="mobile-menu__link">Diario</a>
+      <a href="#contact" class="mobile-menu__link">Contacto</a>
       <a href="#contact" class="mobile-menu__link mobile-menu__link--cta">Hablemos</a>
     </nav>
     <div class="mobile-menu__footer">
@@ -53,7 +62,7 @@
     </div>
   </div>
 
-  <main>
+  <main id="mainContent" tabindex="-1">
 
     <!-- ========== 01 · HERO ========== -->
     <section class="hero" id="hero">
@@ -62,6 +71,10 @@
           src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80"
           alt="Edificio de arquitectura contemporánea con formas geométricas angulares y fachada de hormigón"
           class="hero__image"
+          width="1600"
+          height="1067"
+          fetchpriority="high"
+          decoding="async"
         >
         <div class="hero__image-overlay"></div>
       </div>
@@ -123,11 +136,11 @@
         </div>
         <figure class="editorial-break__figure" data-reveal="fade-in">
           <img
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=600&q=80"
-            alt="Detalle de textura de piedra natural con vetas y tonos cálidos"
+            src="https://images.unsplash.com/photo-1495195129352-aeb325a55b65?auto=format&fit=crop&w=600&q=80"
+            alt="Detalle de muro de hormigón con textura de encofrado"
             loading="lazy"
           >
-          <figcaption class="editorial-break__caption">Detalle material — Piedra caliza, 2024</figcaption>
+          <figcaption class="editorial-break__caption">Detalle material — Investigación de superficie</figcaption>
         </figure>
       </div>
     </section>
@@ -158,7 +171,7 @@
             <span class="project-item__meta-sep">·</span>
             <span>2025</span>
           </div>
-          <a href="#" class="project-item__link" aria-label="Ver proyecto Casa Silencio">Ver proyecto <span class="arrow">↗</span></a>
+          <button type="button" class="project-item__link" aria-label="Ver proyecto Casa Silencio" aria-haspopup="dialog" aria-controls="projectModal">Ver proyecto <span class="arrow" aria-hidden="true">↗</span></button>
         </div>
       </article>
 
@@ -181,7 +194,7 @@
             <span class="project-item__meta-sep">·</span>
             <span>2025</span>
           </div>
-          <a href="#" class="project-item__link" aria-label="Ver proyecto Materia Viva">Ver proyecto <span class="arrow">↗</span></a>
+          <button type="button" class="project-item__link" aria-label="Ver proyecto Materia Viva" aria-haspopup="dialog" aria-controls="projectModal">Ver proyecto <span class="arrow" aria-hidden="true">↗</span></button>
         </div>
       </article>
 
@@ -214,7 +227,7 @@
             <span class="project-item__meta-sep">·</span>
             <span>2024</span>
           </div>
-          <a href="#" class="project-item__link" aria-label="Ver proyecto Umbral">Ver proyecto <span class="arrow">↗</span></a>
+          <button type="button" class="project-item__link" aria-label="Ver proyecto Umbral" aria-haspopup="dialog" aria-controls="projectModal">Ver proyecto <span class="arrow" aria-hidden="true">↗</span></button>
         </div>
       </article>
 
@@ -237,7 +250,7 @@
             <span class="project-item__meta-sep">·</span>
             <span>2024</span>
           </div>
-          <a href="#" class="project-item__link" aria-label="Ver proyecto Paisaje Interior">Ver proyecto <span class="arrow">↗</span></a>
+          <button type="button" class="project-item__link" aria-label="Ver proyecto Paisaje Interior" aria-haspopup="dialog" aria-controls="projectModal">Ver proyecto <span class="arrow" aria-hidden="true">↗</span></button>
         </div>
       </article>
 
@@ -260,7 +273,7 @@
             <span class="project-item__meta-sep">·</span>
             <span>2023</span>
           </div>
-          <a href="#" class="project-item__link" aria-label="Ver proyecto Forma Habitada">Ver proyecto <span class="arrow">↗</span></a>
+          <button type="button" class="project-item__link" aria-label="Ver proyecto Forma Habitada" aria-haspopup="dialog" aria-controls="projectModal">Ver proyecto <span class="arrow" aria-hidden="true">↗</span></button>
         </div>
         <div class="project-item__image-wrap project-item__image-wrap--context">
           <img
@@ -368,24 +381,32 @@
             class="disciplines__image disciplines__image--active"
             src="https://images.unsplash.com/photo-1486718448742-163732cd1544?auto=format&fit=crop&w=800&q=80"
             alt=""
+            loading="lazy"
+            decoding="async"
             data-discipline-img="arquitectura"
           >
           <img
             class="disciplines__image"
             src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80"
             alt=""
+            loading="lazy"
+            decoding="async"
             data-discipline-img="arte"
           >
           <img
             class="disciplines__image"
             src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80"
             alt=""
+            loading="lazy"
+            decoding="async"
             data-discipline-img="espacios"
           >
           <img
             class="disciplines__image"
             src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80"
             alt=""
+            loading="lazy"
+            decoding="async"
             data-discipline-img="investigacion"
           >
         </div>
@@ -492,16 +513,17 @@
       </header>
 
       <div class="archive__filters" data-reveal="fade-up" role="group" aria-label="Filtrar artículos">
-        <button class="archive__filter archive__filter--active" data-filter="all">Todo</button>
-        <button class="archive__filter" data-filter="ensayo">Ensayo</button>
-        <button class="archive__filter" data-filter="proceso">Proceso</button>
-        <button class="archive__filter" data-filter="referencia">Referencia</button>
-        <button class="archive__filter" data-filter="visual">Visual</button>
+        <button class="archive__filter archive__filter--active" data-filter="all" aria-pressed="true">Todo</button>
+        <button class="archive__filter" data-filter="ensayo" aria-pressed="false">Ensayo</button>
+        <button class="archive__filter" data-filter="proceso" aria-pressed="false">Proceso</button>
+        <button class="archive__filter" data-filter="referencia" aria-pressed="false">Referencia</button>
+        <button class="archive__filter" data-filter="visual" aria-pressed="false">Visual</button>
       </div>
+      <p class="archive__results" id="archiveResults" role="status" aria-live="polite"></p>
 
       <div class="archive__grid">
         <article class="archive-card archive-card--large" data-reveal="fade-up" data-category="ensayo">
-          <a href="#" class="archive-card__link">
+          <div class="archive-card__link">
             <div class="archive-card__image-wrap">
               <img
                 src="https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?auto=format&fit=crop&w=800&q=80"
@@ -514,11 +536,11 @@
               <h3 class="archive-card__title">La luz como material arquitectónico</h3>
               <time class="archive-card__date">Octubre 2026</time>
             </div>
-          </a>
+          </div>
         </article>
 
         <article class="archive-card archive-card--small" data-reveal="fade-up" data-category="referencia">
-          <a href="#" class="archive-card__link">
+          <div class="archive-card__link">
             <div class="archive-card__image-wrap">
               <img
                 src="https://images.unsplash.com/photo-1453747063559-36695c8771bd?auto=format&fit=crop&w=600&q=80"
@@ -531,11 +553,11 @@
               <h3 class="archive-card__title">El vacío como elemento de diseño</h3>
               <time class="archive-card__date">Septiembre 2026</time>
             </div>
-          </a>
+          </div>
         </article>
 
         <article class="archive-card archive-card--medium" data-reveal="fade-up" data-category="ensayo">
-          <a href="#" class="archive-card__link">
+          <div class="archive-card__link">
             <div class="archive-card__image-wrap">
               <img
                 src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=700&q=80"
@@ -548,11 +570,11 @@
               <h3 class="archive-card__title">Arte contemporáneo y espacio público</h3>
               <time class="archive-card__date">Julio 2026</time>
             </div>
-          </a>
+          </div>
         </article>
 
         <article class="archive-card archive-card--small" data-reveal="fade-up" data-category="visual">
-          <a href="#" class="archive-card__link">
+          <div class="archive-card__link">
             <div class="archive-card__image-wrap">
               <img
                 src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=600&q=80"
@@ -565,11 +587,11 @@
               <h3 class="archive-card__title">La belleza de los materiales imperfectos</h3>
               <time class="archive-card__date">Mayo 2026</time>
             </div>
-          </a>
+          </div>
         </article>
 
         <article class="archive-card archive-card--medium" data-reveal="fade-up" data-category="proceso">
-          <a href="#" class="archive-card__link">
+          <div class="archive-card__link">
             <div class="archive-card__image-wrap">
               <img
                 src="https://images.unsplash.com/photo-1486718448742-163732cd1544?auto=format&fit=crop&w=700&q=80"
@@ -582,7 +604,7 @@
               <h3 class="archive-card__title">Procesos, bocetos y experimentación</h3>
               <time class="archive-card__date">Marzo 2026</time>
             </div>
-          </a>
+          </div>
         </article>
       </div>
     </section>
@@ -600,20 +622,20 @@
           <p class="contact__subtitle">Cuéntanos qué tienes en mente. Nos interesan las ideas que cuestionan lo establecido y abren nuevas posibilidades.</p>
         </div>
 
-        <form class="contact__form" id="contactForm" novalidate data-reveal="fade-up">
+        <form class="contact__form" id="contactForm" novalidate data-endpoint="" data-reveal="fade-up">
           <div class="form-group">
             <label for="contact-name">Nombre</label>
-            <input type="text" id="contact-name" name="name" required autocomplete="name">
-            <span class="form-error" aria-live="polite"></span>
+            <input type="text" id="contact-name" name="name" required autocomplete="name" minlength="2" aria-describedby="contact-name-error">
+            <span class="form-error" id="contact-name-error"></span>
           </div>
           <div class="form-group">
             <label for="contact-email">Correo electrónico</label>
-            <input type="email" id="contact-email" name="email" required autocomplete="email">
-            <span class="form-error" aria-live="polite"></span>
+            <input type="email" id="contact-email" name="email" required autocomplete="email" aria-describedby="contact-email-error">
+            <span class="form-error" id="contact-email-error"></span>
           </div>
           <div class="form-group">
             <label for="contact-type">Tipo de proyecto</label>
-            <select id="contact-type" name="type" required>
+            <select id="contact-type" name="type" required aria-describedby="contact-type-error">
               <option value="">Seleccionar...</option>
               <option value="arquitectura">Arquitectura</option>
               <option value="arte">Arte / Instalación</option>
@@ -621,29 +643,24 @@
               <option value="investigacion">Investigación</option>
               <option value="otro">Otro</option>
             </select>
-            <span class="form-error" aria-live="polite"></span>
+            <span class="form-error" id="contact-type-error"></span>
           </div>
           <div class="form-group">
             <label for="contact-message">Mensaje</label>
-            <textarea id="contact-message" name="message" rows="5" required></textarea>
-            <span class="form-error" aria-live="polite"></span>
+            <textarea id="contact-message" name="message" rows="5" required minlength="10" aria-describedby="contact-message-error"></textarea>
+            <span class="form-error" id="contact-message-error"></span>
           </div>
-          <button type="submit" class="contact__submit" id="submitBtn">
+          <button type="submit" class="contact__submit" id="submitBtn" aria-describedby="formStatus">
             <span class="contact__submit-text">Enviar propuesta ↗</span>
             <span class="contact__submit-loading" aria-hidden="true">Enviando...</span>
           </button>
-          <div class="form-status" id="formStatus" role="alert" aria-live="assertive"></div>
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
         </form>
 
         <div class="contact__info" data-reveal="fade-up">
           <div class="contact__info-block">
-            <span class="contact__info-label">Correo</span>
-            <a href="mailto:info@formaespacio.com">info@formaespacio.com</a>
-          </div>
-          <div class="contact__info-block">
-            <span class="contact__info-label">Social</span>
-            <a href="https://instagram.com/formaespacio" target="_blank" rel="noopener">Instagram</a>
-            <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="contact__info-label">Contacto</span>
+            <a href="#contactForm">Formulario de contacto</a>
           </div>
           <div class="contact__info-block">
             <span class="contact__info-label">Ubicación</span>
@@ -659,7 +676,7 @@
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__top">
-        <a href="#" class="footer__logo">FORMA / ESPACIO</a>
+        <a href="#hero" class="footer__logo" aria-label="ARQstudio — Inicio">ARQstudio</a>
         <p class="footer__tagline">Pensar el espacio. Transformar la experiencia.</p>
       </div>
       <div class="footer__middle">
@@ -670,32 +687,29 @@
           <a href="#contact">Contacto</a>
         </nav>
         <div class="footer__social">
-          <a href="mailto:info@formaespacio.com">info@formaespacio.com</a>
-          <a href="https://instagram.com/formaespacio" target="_blank" rel="noopener">Instagram</a>
-          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#contact">Formulario de contacto ↗</a>
         </div>
       </div>
       <div class="footer__bottom">
-        <span>© <span id="yearDisplay"></span> FORMA / ESPACIO</span>
-        <a href="#">Aviso legal</a>
-        <a href="#">Política de privacidad</a>
-        <button id="cookiePrefs">Preferencias de cookies</button>
+        <span>© <span id="yearDisplay"></span> ARQstudio</span>
+        <span>Información legal pendiente de facilitar</span>
+        <button id="cookiePrefs" type="button">Preferencias de cookies</button>
       </div>
     </div>
   </footer>
 
   <!-- ========== PROJECT MODAL ========== -->
-  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-label="Detalle del proyecto" aria-hidden="true">
-    <button class="modal__close" aria-label="Cerrar proyecto">✕</button>
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" aria-describedby="projectModalDescription" aria-hidden="true" inert>
+    <button class="modal__close" type="button" aria-label="Cerrar proyecto">✕</button>
     <div class="modal__content">
       <div class="modal__hero">
-        <img class="modal__hero-img" src="" alt="">
+        <img class="modal__hero-img" alt="">
       </div>
       <div class="modal__body">
         <span class="modal__number"></span>
-        <h2 class="modal__title"></h2>
+        <h2 class="modal__title" id="projectModalTitle"></h2>
         <div class="modal__meta"></div>
-        <div class="modal__description"></div>
+        <div class="modal__description" id="projectModalDescription"></div>
         <div class="modal__details">
           <div class="modal__detail">
             <span class="modal__detail-label">Categoría</span>
@@ -720,12 +734,13 @@
   </div>
 
   <!-- ========== COOKIE BANNER ========== -->
-  <div class="cookie-banner" id="cookieBanner" role="alert">
-    <p>Este sitio utiliza cookies para mejorar la experiencia de navegación. <a href="#">Más información</a>.</p>
+  <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Preferencias de cookies" aria-hidden="true">
+    <p id="cookieMessage">No hay analítica ni publicidad configurada. La elección solo guarda una preferencia en este navegador; las imágenes se sirven desde Unsplash.</p>
     <div class="cookie-banner__actions">
-      <button id="cookieAccept" class="cookie-banner__btn cookie-banner__btn--accept">Aceptar</button>
-      <button id="cookieReject" class="cookie-banner__btn">Rechazar</button>
+      <button id="cookieAccept" type="button" class="cookie-banner__btn cookie-banner__btn--accept">Aceptar</button>
+      <button id="cookieReject" type="button" class="cookie-banner__btn">Rechazar</button>
     </div>
+    <p class="cookie-banner__status" id="cookieStatus" role="status" aria-live="polite"></p>
   </div>
 
   <script src="assets/js/main.js"></script>

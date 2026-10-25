@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORMA / ESPACIO — Arte · Arquitectura · Investigación</title>
+  <meta name="description" content="Estudio independiente de prácticas espaciales contemporáneas. Arte, arquitectura, diseño de espacios e investigación visual.">
+  <meta property="og:title" content="FORMA / ESPACIO — Arte · Arquitectura · Investigación">
+  <meta property="og:description" content="Estudio independiente que explora la relación entre espacio, materia y percepción.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar" id="progressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="FORMA / ESPACIO — Inicio">FORMA <span class="nav__logo-slash">/</span> ESPACIO</a>
+      <nav class="nav__links" aria-label="Navegación principal">
+        <a href="#projects" class="nav__link" data-nav="projects">Proyectos</a>
+        <a href="#studio" class="nav__link" data-nav="studio">Estudio</a>
+        <a href="#archive" class="nav__link" data-nav="archive">Investigación</a>
+        <a href="#contact" class="nav__link" data-nav="contact">Diario</a>
+        <a href="#contact" class="nav__cta">Hablemos</a>
+        <button class="nav__lang" aria-label="Cambiar idioma">ES <span>/ EN</span></button>
+      </nav>
+      <button class="nav__burger" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menú de navegación">
+    <nav class="mobile-menu__nav">
+      <a href="#projects" class="mobile-menu__link">Proyectos</a>
+      <a href="#studio" class="mobile-menu__link">Estudio</a>
+      <a href="#archive" class="mobile-menu__link">Investigación</a>
+      <a href="#contact" class="mobile-menu__link">Diario</a>
+      <a href="#contact" class="mobile-menu__link mobile-menu__link--cta">Hablemos</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <span class="mobile-menu__meta">PRÁCTICAS ESPACIALES CONTEMPORÁNEAS</span>
+      <span class="mobile-menu__meta">EST. 2020 — VALENCIA, ESPAÑA</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ========== 01 · HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero__image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80"
+          alt="Edificio de arquitectura contemporánea con formas geométricas angulares y fachada de hormigón"
+          class="hero__image"
+        >
+        <div class="hero__image-overlay"></div>
+      </div>
+
+      <div class="hero__content">
+        <h1 class="hero__title" data-reveal="fade-up">
+          <span class="hero__title-line">ARTE,</span>
+          <span class="hero__title-line">ESPACIO</span>
+          <span class="hero__title-line hero__title-line--accent">Y MATERIA.</span>
+        </h1>
+        <p class="hero__subtitle" data-reveal="fade-up">
+          Exploramos la relación entre espacio, materia y percepción<br>
+          para crear experiencias que trascienden lo funcional.
+        </p>
+        <a href="#projects" class="hero__cta" data-reveal="fade-up">Explorar archivo ↗</a>
+      </div>
+
+      <div class="hero__annotation hero__annotation--left">
+        <span>PRÁCTICAS ESPACIALES CONTEMPORÁNEAS</span>
+      </div>
+
+      <div class="hero__annotation hero__annotation--right">
+        <span>39°28'N 0°22'W</span>
+      </div>
+
+      <div class="hero__bottom">
+        <div class="hero__meta">
+          <span>EST. 2020</span>
+          <span class="hero__meta-dot">·</span>
+          <span>Nº 001</span>
+        </div>
+        <div class="hero__scroll">
+          <span class="hero__scroll-text">SCROLL</span>
+          <div class="hero__scroll-line"></div>
+        </div>
+        <div class="hero__meta hero__meta--right">
+          <span>ARTE</span>
+          <span class="hero__meta-dot">·</span>
+          <span>ARQUITECTURA</span>
+          <span class="hero__meta-dot">·</span>
+          <span>INVESTIGACIÓN</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 02 · EDITORIAL TRANSITION ========== -->
+    <section class="editorial-break" id="manifesto">
+      <div class="editorial-break__inner">
+        <h2 class="editorial-break__title" data-reveal="fade-up">
+          <span>EL ESPACIO</span>
+          <span>TAMBIÉN ES UNA</span>
+          <span>FORMA DE</span>
+          <span class="editorial-break__title--serif">PENSAMIENTO.</span>
+        </h2>
+        <div class="editorial-break__aside" data-reveal="fade-up">
+          <div class="editorial-break__line"></div>
+          <p>Entendemos el arte y la arquitectura como herramientas para interpretar el mundo. Investigamos la materia, la luz y el vacío para desarrollar proyectos que conectan personas, lugares e ideas.</p>
+          <p>No buscamos únicamente construir espacios. Buscamos generar experiencias, despertar preguntas y crear nuevas formas de habitar.</p>
+        </div>
+        <figure class="editorial-break__figure" data-reveal="fade-in">
+          <img
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=600&q=80"
+            alt="Detalle de textura de piedra natural con vetas y tonos cálidos"
+            loading="lazy"
+          >
+          <figcaption class="editorial-break__caption">Detalle material — Piedra caliza, 2024</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========== 03 · PROJECTS ========== -->
+    <section class="projects" id="projects" data-section="projects">
+      <header class="projects__header" data-reveal="fade-up">
+        <span class="section-number">01 / PROYECTOS SELECCIONADOS</span>
+        <p class="projects__intro">Proyectos que exploran los límites entre arte, arquitectura y experiencia.</p>
+      </header>
+
+      <!-- Project 01 — Full Width -->
+      <article class="project-item project-item--wide" data-reveal="fade-up" data-project="casa-silencio">
+        <div class="project-item__image-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80"
+            alt="Casa Silencio — Fachada minimalista blanca rodeada de vegetación mediterránea"
+            loading="lazy"
+          >
+        </div>
+        <div class="project-item__info project-item__info--overlay">
+          <span class="project-item__number">01</span>
+          <h3 class="project-item__title">CASA SILENCIO</h3>
+          <div class="project-item__meta">
+            <span>Arquitectura residencial</span>
+            <span class="project-item__meta-sep">·</span>
+            <span>Valencia, España</span>
+            <span class="project-item__meta-sep">·</span>
+            <span>2025</span>
+          </div>
+          <a href="#" class="project-item__link" aria-label="Ver proyecto Casa Silencio">Ver proyecto <span class="arrow">↗</span></a>
+        </div>
+      </article>
+
+      <!-- Project 02 — Vertical -->
+      <article class="project-item project-item--vertical" data-reveal="fade-up" data-project="materia-viva">
+        <div class="project-item__image-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1493397212122-2b85dda8106b?auto=format&fit=crop&w=900&q=80"
+            alt="Materia Viva — Estructura escultórica angular de hormigón visto en entorno urbano"
+            loading="lazy"
+          >
+        </div>
+        <div class="project-item__info project-item__info--aside">
+          <span class="project-item__number">02</span>
+          <h3 class="project-item__title">MATERIA<br>VIVA</h3>
+          <div class="project-item__meta">
+            <span>Instalación artística</span>
+            <span class="project-item__meta-sep">·</span>
+            <span>Barcelona, España</span>
+            <span class="project-item__meta-sep">·</span>
+            <span>2025</span>
+          </div>
+          <a href="#" class="project-item__link" aria-label="Ver proyecto Materia Viva">Ver proyecto <span class="arrow">↗</span></a>
+        </div>
+      </article>
+
+      <!-- Project 03 — Duo -->
+      <article class="project-item project-item--duo" data-reveal="fade-up" data-project="umbral">
+        <div class="project-item__images">
+          <div class="project-item__image-wrap project-item__image-wrap--tall">
+            <img
+              src="https://images.unsplash.com/photo-1431576901776-e539bd916ba2?auto=format&fit=crop&w=700&q=80"
+              alt="Umbral — Perspectiva interior de estructura arquitectónica con juego de luces"
+              loading="lazy"
+            >
+          </div>
+          <div class="project-item__image-wrap project-item__image-wrap--short">
+            <img
+              src="https://images.unsplash.com/photo-1495195129352-aeb325a55b65?auto=format&fit=crop&w=500&q=80"
+              alt="Umbral — Detalle de muro de hormigón con textura de encofrado"
+              loading="lazy"
+            >
+            <span class="project-item__annotation">Fig. 03 — Detalle constructivo</span>
+          </div>
+        </div>
+        <div class="project-item__info project-item__info--between">
+          <span class="project-item__number">03</span>
+          <h3 class="project-item__title">UMBRAL</h3>
+          <div class="project-item__meta">
+            <span>Espacio expositivo</span>
+            <span class="project-item__meta-sep">·</span>
+            <span>Madrid, España</span>
+            <span class="project-item__meta-sep">·</span>
+            <span>2024</span>
+          </div>
+          <a href="#" class="project-item__link" aria-label="Ver proyecto Umbral">Ver proyecto <span class="arrow">↗</span></a>
+        </div>
+      </article>
+
+      <!-- Project 04 — Panoramic -->
+      <article class="project-item project-item--panoramic" data-reveal="fade-up" data-project="paisaje-interior">
+        <div class="project-item__image-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1400&q=80"
+            alt="Paisaje Interior — Galería de arte contemporáneo con paredes blancas y luz cenital"
+            loading="lazy"
+          >
+        </div>
+        <div class="project-item__info project-item__info--overlay-bottom">
+          <span class="project-item__number">04</span>
+          <h3 class="project-item__title">PAISAJE INTERIOR</h3>
+          <div class="project-item__meta">
+            <span>Investigación espacial</span>
+            <span class="project-item__meta-sep">·</span>
+            <span>Lisboa, Portugal</span>
+            <span class="project-item__meta-sep">·</span>
+            <span>2024</span>
+          </div>
+          <a href="#" class="project-item__link" aria-label="Ver proyecto Paisaje Interior">Ver proyecto <span class="arrow">↗</span></a>
+        </div>
+      </article>
+
+      <!-- Project 05 — Split -->
+      <article class="project-item project-item--split" data-reveal="fade-up" data-project="forma-habitada">
+        <div class="project-item__image-wrap project-item__image-wrap--detail">
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80"
+            alt="Forma Habitada — Interior contemporáneo con mobiliario minimalista y luz natural"
+            loading="lazy"
+          >
+        </div>
+        <div class="project-item__info project-item__info--center">
+          <span class="project-item__number">05</span>
+          <h3 class="project-item__title">FORMA<br>HABITADA</h3>
+          <div class="project-item__meta">
+            <span>Diseño de interiores</span>
+            <span class="project-item__meta-sep">·</span>
+            <span>Valencia, España</span>
+            <span class="project-item__meta-sep">·</span>
+            <span>2023</span>
+          </div>
+          <a href="#" class="project-item__link" aria-label="Ver proyecto Forma Habitada">Ver proyecto <span class="arrow">↗</span></a>
+        </div>
+        <div class="project-item__image-wrap project-item__image-wrap--context">
+          <img
+            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80"
+            alt="Forma Habitada — Espacio de trabajo con maquetas y muestras de materiales"
+            loading="lazy"
+          >
+          <span class="project-item__annotation">Fig. 05b — Proceso de diseño</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- ========== 04 · INTERLUDE ========== -->
+    <section class="interlude" id="interlude">
+      <div class="interlude__image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?auto=format&fit=crop&w=1800&q=80"
+          alt="Estructura monumental de hormigón visto con perspectiva dramática y cielo gris"
+          loading="lazy"
+          class="interlude__image"
+        >
+      </div>
+      <div class="interlude__content" data-reveal="fade-in">
+        <p class="interlude__text">INVESTIGAR LA MATERIA.</p>
+        <p class="interlude__text">CUESTIONAR LA FORMA.</p>
+      </div>
+      <figure class="interlude__detail" data-reveal="fade-up">
+        <img
+          src="https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?auto=format&fit=crop&w=400&q=80"
+          alt="Detalle de piedra oscura con textura orgánica y grietas naturales"
+          loading="lazy"
+        >
+        <figcaption>Estudio de materialidad — Serie Nº 07</figcaption>
+      </figure>
+    </section>
+
+    <!-- ========== 05 · DISCIPLINES ========== -->
+    <section class="disciplines" id="disciplines" data-section="disciplines">
+      <header class="disciplines__header" data-reveal="fade-up">
+        <span class="section-number">02 / CAMPOS DE INVESTIGACIÓN</span>
+        <p class="disciplines__intro">Pensamos, diseñamos y experimentamos.</p>
+      </header>
+
+      <div class="disciplines__body">
+        <div class="disciplines__list">
+          <button
+            class="discipline-item"
+            data-discipline="arquitectura"
+            data-image="https://images.unsplash.com/photo-1486718448742-163732cd1544?auto=format&fit=crop&w=800&q=80"
+            aria-expanded="false"
+          >
+            <span class="discipline-item__number">01</span>
+            <span class="discipline-item__name">ARQUITECTURA</span>
+            <span class="discipline-item__arrow">↗</span>
+            <div class="discipline-item__detail" aria-hidden="true">
+              <p>Diseño de espacios habitables, culturales y experimentales que responden a su contexto y a las personas que los viven.</p>
+            </div>
+          </button>
+
+          <button
+            class="discipline-item"
+            data-discipline="arte"
+            data-image="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80"
+            aria-expanded="false"
+          >
+            <span class="discipline-item__number">02</span>
+            <span class="discipline-item__name">ARTE E INSTALACIONES</span>
+            <span class="discipline-item__arrow">↗</span>
+            <div class="discipline-item__detail" aria-hidden="true">
+              <p>Creación de obras, instalaciones y experiencias espaciales que exploran la percepción, el movimiento y la materialidad.</p>
+            </div>
+          </button>
+
+          <button
+            class="discipline-item"
+            data-discipline="espacios"
+            data-image="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80"
+            aria-expanded="false"
+          >
+            <span class="discipline-item__number">03</span>
+            <span class="discipline-item__name">ESPACIOS CULTURALES</span>
+            <span class="discipline-item__arrow">↗</span>
+            <div class="discipline-item__detail" aria-hidden="true">
+              <p>Desarrollo de interiores, espacios expositivos y entornos comerciales con una identidad visual y espacial propia.</p>
+            </div>
+          </button>
+
+          <button
+            class="discipline-item"
+            data-discipline="investigacion"
+            data-image="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80"
+            aria-expanded="false"
+          >
+            <span class="discipline-item__number">04</span>
+            <span class="discipline-item__name">INVESTIGACIÓN VISUAL</span>
+            <span class="discipline-item__arrow">↗</span>
+            <div class="discipline-item__detail" aria-hidden="true">
+              <p>Exploración de materiales, referencias culturales, procesos creativos y nuevas maneras de entender el espacio.</p>
+            </div>
+          </button>
+        </div>
+
+        <div class="disciplines__image-container" aria-hidden="true">
+          <img
+            class="disciplines__image disciplines__image--active"
+            src="https://images.unsplash.com/photo-1486718448742-163732cd1544?auto=format&fit=crop&w=800&q=80"
+            alt=""
+            data-discipline-img="arquitectura"
+          >
+          <img
+            class="disciplines__image"
+            src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80"
+            alt=""
+            data-discipline-img="arte"
+          >
+          <img
+            class="disciplines__image"
+            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80"
+            alt=""
+            data-discipline-img="espacios"
+          >
+          <img
+            class="disciplines__image"
+            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80"
+            alt=""
+            data-discipline-img="investigacion"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 06 · PROCESS ========== -->
+    <section class="process" id="process">
+      <header class="process__header" data-reveal="fade-up">
+        <span class="section-number">—</span>
+        <h2 class="process__title">De la idea al espacio.</h2>
+      </header>
+      <div class="process__steps">
+        <div class="process__step" data-reveal="fade-up">
+          <span class="process__step-number">01</span>
+          <h3 class="process__step-name">Observar</h3>
+          <p class="process__step-desc">Comprender el contexto, las necesidades y las referencias.</p>
+        </div>
+        <div class="process__step" data-reveal="fade-up">
+          <span class="process__step-number">02</span>
+          <h3 class="process__step-name">Investigar</h3>
+          <p class="process__step-desc">Explorar materiales, conceptos y posibilidades formales.</p>
+        </div>
+        <div class="process__step" data-reveal="fade-up">
+          <span class="process__step-number">03</span>
+          <h3 class="process__step-name">Experimentar</h3>
+          <p class="process__step-desc">Crear prototipos, desarrollar ideas y poner a prueba soluciones.</p>
+        </div>
+        <div class="process__step" data-reveal="fade-up">
+          <span class="process__step-number">04</span>
+          <h3 class="process__step-name">Materializar</h3>
+          <p class="process__step-desc">Convertir el concepto en una experiencia espacial tangible.</p>
+        </div>
+      </div>
+      <figure class="process__figure" data-reveal="fade-in">
+        <img
+          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80"
+          alt="Persona contemplando maqueta arquitectónica con luz natural lateral"
+          loading="lazy"
+        >
+        <figcaption>Proceso de diseño — Maqueta de estudio, 2024</figcaption>
+      </figure>
+    </section>
+
+    <!-- ========== 07 · STUDIO ========== -->
+    <section class="studio-section" id="studio" data-section="studio">
+      <div class="studio-section__layout">
+        <div class="studio-section__text" data-reveal="fade-up">
+          <span class="section-number">—</span>
+          <h2 class="studio-section__title">
+            NO DISEÑAMOS<br>OBJETOS AISLADOS.<br>
+            <span class="studio-section__title--serif">INVESTIGAMOS RELACIONES.</span>
+          </h2>
+          <div class="studio-section__body">
+            <p>Somos un estudio independiente que trabaja en la intersección entre arte, arquitectura y cultura visual. Nos interesa explorar cómo los espacios influyen en nuestra forma de pensar, sentir y relacionarnos.</p>
+            <p>Trabajamos desde la investigación, el diálogo y la experimentación para desarrollar propuestas sensibles a su contexto y abiertas a nuevas interpretaciones.</p>
+          </div>
+          <ul class="studio-section__data">
+            <li>
+              <span class="studio-section__data-label">Enfoque</span>
+              <span class="studio-section__data-value">Práctica interdisciplinar</span>
+            </li>
+            <li>
+              <span class="studio-section__data-label">Proyectos</span>
+              <span class="studio-section__data-value">Culturales y espaciales</span>
+            </li>
+            <li>
+              <span class="studio-section__data-label">Alcance</span>
+              <span class="studio-section__data-value">Colaboraciones internacionales</span>
+            </li>
+          </ul>
+        </div>
+        <figure class="studio-section__image" data-reveal="fade-in">
+          <img
+            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80"
+            alt="Mesa de trabajo de estudio de arquitectura con maquetas, planos y muestras de materiales"
+            loading="lazy"
+          >
+          <figcaption>Estudio — Valencia, 2024</figcaption>
+        </figure>
+      </div>
+
+      <!-- Collaborations sub-section -->
+      <div class="collaborations" data-reveal="fade-up">
+        <h3 class="collaborations__title">Las mejores ideas nacen del diálogo.</h3>
+        <p class="collaborations__text">Colaboramos con artistas, arquitectos, instituciones culturales, diseñadores y personas que buscan nuevas maneras de pensar el espacio.</p>
+        <div class="collaborations__tags">
+          <span>Artistas</span>
+          <span>Arquitectos</span>
+          <span>Instituciones culturales</span>
+          <span>Diseñadores</span>
+          <span>Investigadores</span>
+          <span>Comisarios</span>
+        </div>
+        <a href="#contact" class="collaborations__link">Proponer una colaboración ↗</a>
+      </div>
+    </section>
+
+    <!-- ========== 08 · ARCHIVE ========== -->
+    <section class="archive" id="archive" data-section="archive">
+      <header class="archive__header" data-reveal="fade-up">
+        <span class="section-number">03 / ARCHIVO ABIERTO</span>
+        <p class="archive__intro">Notas sobre el espacio.</p>
+      </header>
+
+      <div class="archive__filters" data-reveal="fade-up" role="group" aria-label="Filtrar artículos">
+        <button class="archive__filter archive__filter--active" data-filter="all">Todo</button>
+        <button class="archive__filter" data-filter="ensayo">Ensayo</button>
+        <button class="archive__filter" data-filter="proceso">Proceso</button>
+        <button class="archive__filter" data-filter="referencia">Referencia</button>
+        <button class="archive__filter" data-filter="visual">Visual</button>
+      </div>
+
+      <div class="archive__grid">
+        <article class="archive-card archive-card--large" data-reveal="fade-up" data-category="ensayo">
+          <a href="#" class="archive-card__link">
+            <div class="archive-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?auto=format&fit=crop&w=800&q=80"
+                alt="Líneas arquitectónicas con fuerte perspectiva y luz natural"
+                loading="lazy"
+              >
+            </div>
+            <div class="archive-card__content">
+              <span class="archive-card__category">Ensayo</span>
+              <h3 class="archive-card__title">La luz como material arquitectónico</h3>
+              <time class="archive-card__date">Octubre 2026</time>
+            </div>
+          </a>
+        </article>
+
+        <article class="archive-card archive-card--small" data-reveal="fade-up" data-category="referencia">
+          <a href="#" class="archive-card__link">
+            <div class="archive-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1453747063559-36695c8771bd?auto=format&fit=crop&w=600&q=80"
+                alt="Escalera de hormigón visto con geometría brutalista"
+                loading="lazy"
+              >
+            </div>
+            <div class="archive-card__content">
+              <span class="archive-card__category">Referencia</span>
+              <h3 class="archive-card__title">El vacío como elemento de diseño</h3>
+              <time class="archive-card__date">Septiembre 2026</time>
+            </div>
+          </a>
+        </article>
+
+        <article class="archive-card archive-card--medium" data-reveal="fade-up" data-category="ensayo">
+          <a href="#" class="archive-card__link">
+            <div class="archive-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=700&q=80"
+                alt="Vista urbana de edificios contemporáneos con fachadas de vidrio y acero"
+                loading="lazy"
+              >
+            </div>
+            <div class="archive-card__content">
+              <span class="archive-card__category">Ensayo</span>
+              <h3 class="archive-card__title">Arte contemporáneo y espacio público</h3>
+              <time class="archive-card__date">Julio 2026</time>
+            </div>
+          </a>
+        </article>
+
+        <article class="archive-card archive-card--small" data-reveal="fade-up" data-category="visual">
+          <a href="#" class="archive-card__link">
+            <div class="archive-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=600&q=80"
+                alt="Interior de museo con instalación artística y luz cenital"
+                loading="lazy"
+              >
+            </div>
+            <div class="archive-card__content">
+              <span class="archive-card__category">Visual</span>
+              <h3 class="archive-card__title">La belleza de los materiales imperfectos</h3>
+              <time class="archive-card__date">Mayo 2026</time>
+            </div>
+          </a>
+        </article>
+
+        <article class="archive-card archive-card--medium" data-reveal="fade-up" data-category="proceso">
+          <a href="#" class="archive-card__link">
+            <div class="archive-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1486718448742-163732cd1544?auto=format&fit=crop&w=700&q=80"
+                alt="Fachada de edificio moderno con patrones geométricos repetitivos"
+                loading="lazy"
+              >
+            </div>
+            <div class="archive-card__content">
+              <span class="archive-card__category">Proceso</span>
+              <h3 class="archive-card__title">Procesos, bocetos y experimentación</h3>
+              <time class="archive-card__date">Marzo 2026</time>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== 09 · CONTACT ========== -->
+    <section class="contact" id="contact" data-section="contact">
+      <div class="contact__layout">
+        <div class="contact__statement" data-reveal="fade-up">
+          <h2 class="contact__title">
+            <span>LAS IDEAS</span>
+            <span>TAMBIÉN</span>
+            <span>CONSTRUYEN</span>
+            <span class="contact__title--serif">ESPACIOS.</span>
+          </h2>
+          <p class="contact__subtitle">Cuéntanos qué tienes en mente. Nos interesan las ideas que cuestionan lo establecido y abren nuevas posibilidades.</p>
+        </div>
+
+        <form class="contact__form" id="contactForm" novalidate data-reveal="fade-up">
+          <div class="form-group">
+            <label for="contact-name">Nombre</label>
+            <input type="text" id="contact-name" name="name" required autocomplete="name">
+            <span class="form-error" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Correo electrónico</label>
+            <input type="email" id="contact-email" name="email" required autocomplete="email">
+            <span class="form-error" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-type">Tipo de proyecto</label>
+            <select id="contact-type" name="type" required>
+              <option value="">Seleccionar...</option>
+              <option value="arquitectura">Arquitectura</option>
+              <option value="arte">Arte / Instalación</option>
+              <option value="espacios">Diseño de espacios</option>
+              <option value="investigacion">Investigación</option>
+              <option value="otro">Otro</option>
+            </select>
+            <span class="form-error" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Mensaje</label>
+            <textarea id="contact-message" name="message" rows="5" required></textarea>
+            <span class="form-error" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="contact__submit" id="submitBtn">
+            <span class="contact__submit-text">Enviar propuesta ↗</span>
+            <span class="contact__submit-loading" aria-hidden="true">Enviando...</span>
+          </button>
+          <div class="form-status" id="formStatus" role="alert" aria-live="assertive"></div>
+        </form>
+
+        <div class="contact__info" data-reveal="fade-up">
+          <div class="contact__info-block">
+            <span class="contact__info-label">Correo</span>
+            <a href="mailto:info@formaespacio.com">info@formaespacio.com</a>
+          </div>
+          <div class="contact__info-block">
+            <span class="contact__info-label">Social</span>
+            <a href="https://instagram.com/formaespacio" target="_blank" rel="noopener">Instagram</a>
+            <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+          <div class="contact__info-block">
+            <span class="contact__info-label">Ubicación</span>
+            <span>Valencia, España</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <a href="#" class="footer__logo">FORMA / ESPACIO</a>
+        <p class="footer__tagline">Pensar el espacio. Transformar la experiencia.</p>
+      </div>
+      <div class="footer__middle">
+        <nav class="footer__nav" aria-label="Navegación secundaria">
+          <a href="#projects">Proyectos</a>
+          <a href="#studio">Estudio</a>
+          <a href="#archive">Investigación</a>
+          <a href="#contact">Contacto</a>
+        </nav>
+        <div class="footer__social">
+          <a href="mailto:info@formaespacio.com">info@formaespacio.com</a>
+          <a href="https://instagram.com/formaespacio" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="yearDisplay"></span> FORMA / ESPACIO</span>
+        <a href="#">Aviso legal</a>
+        <a href="#">Política de privacidad</a>
+        <button id="cookiePrefs">Preferencias de cookies</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== PROJECT MODAL ========== -->
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-label="Detalle del proyecto" aria-hidden="true">
+    <button class="modal__close" aria-label="Cerrar proyecto">✕</button>
+    <div class="modal__content">
+      <div class="modal__hero">
+        <img class="modal__hero-img" src="" alt="">
+      </div>
+      <div class="modal__body">
+        <span class="modal__number"></span>
+        <h2 class="modal__title"></h2>
+        <div class="modal__meta"></div>
+        <div class="modal__description"></div>
+        <div class="modal__details">
+          <div class="modal__detail">
+            <span class="modal__detail-label">Categoría</span>
+            <span class="modal__detail-value" data-field="category"></span>
+          </div>
+          <div class="modal__detail">
+            <span class="modal__detail-label">Ubicación</span>
+            <span class="modal__detail-value" data-field="location"></span>
+          </div>
+          <div class="modal__detail">
+            <span class="modal__detail-label">Año</span>
+            <span class="modal__detail-value" data-field="year"></span>
+          </div>
+          <div class="modal__detail">
+            <span class="modal__detail-label">Estado</span>
+            <span class="modal__detail-value" data-field="status"></span>
+          </div>
+        </div>
+        <div class="modal__gallery"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== COOKIE BANNER ========== -->
+  <div class="cookie-banner" id="cookieBanner" role="alert">
+    <p>Este sitio utiliza cookies para mejorar la experiencia de navegación. <a href="#">Más información</a>.</p>
+    <div class="cookie-banner__actions">
+      <button id="cookieAccept" class="cookie-banner__btn cookie-banner__btn--accept">Aceptar</button>
+      <button id="cookieReject" class="cookie-banner__btn">Rechazar</button>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

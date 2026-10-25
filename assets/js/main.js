@@ -13,6 +13,23 @@
   const mobileMenu = document.getElementById('mobileMenu');
   const modal = document.getElementById('projectModal');
   let modalTrigger = null;
+  const initialInertState = new Map(
+    Array.from(document.body.children).map(function (element) {
+      return [element, element.inert];
+    })
+  );
+
+  function syncDialogBackground() {
+    const activeDialog = modal && modal.classList.contains('modal--open')
+      ? modal
+      : mobileMenu && mobileMenu.classList.contains('mobile-menu--open')
+        ? mobileMenu
+        : null;
+
+    initialInertState.forEach(function (wasInert, element) {
+      element.inert = activeDialog ? element !== activeDialog : wasInert;
+    });
+  }
 
   function updateProgress() {
     if (!progressBar) return;
@@ -30,6 +47,7 @@
     const menuOpen = mobileMenu && mobileMenu.classList.contains('mobile-menu--open');
     const modalOpen = modal && modal.classList.contains('modal--open');
     document.body.style.overflow = menuOpen || modalOpen ? 'hidden' : '';
+    syncDialogBackground();
   }
 
   function setMenuOpen(open, restoreFocus) {
@@ -183,10 +201,10 @@
       title: 'CASA SILENCIO',
       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80',
       category: 'Arquitectura residencial',
-      location: 'Valencia, España',
-      year: '2025',
-      status: 'En desarrollo',
-      description: 'Un proyecto residencial que explora la relación entre el silencio arquitectónico y la naturaleza mediterránea. La vivienda se organiza alrededor de patios que filtran la luz y el sonido, creando una secuencia de espacios contemplativos.',
+      location: 'Por verificar',
+      year: 'Por verificar',
+      status: 'Caso conceptual de muestra; confirmar autoría, ubicación, fecha y estado antes de atribuirlo al estudio.',
+      description: 'Ejercicio conceptual de muestra que explora la relación entre la arquitectura residencial y la naturaleza mediterránea. Esta descripción no acredita un encargo ni una vivienda construida; confirmar autoría y datos antes de presentarlo como trabajo del estudio.',
       gallery: [
         'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
         'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80'
@@ -197,10 +215,10 @@
       title: 'MATERIA VIVA',
       image: 'https://images.unsplash.com/photo-1493397212122-2b85dda8106b?auto=format&fit=crop&w=1400&q=80',
       category: 'Instalación artística',
-      location: 'Barcelona, España',
-      year: '2025',
-      status: 'Completado',
-      description: 'Instalación site-specific que investiga las propiedades expresivas de los materiales orgánicos. Piezas de madera, piedra y arcilla interactúan con la luz natural, transformándose a lo largo del día.',
+      location: 'Por verificar',
+      year: 'Por verificar',
+      status: 'Caso conceptual de muestra; confirmar autoría, ubicación, fecha y estado antes de atribuirlo al estudio.',
+      description: 'Ejercicio conceptual de muestra que explora las posibilidades expresivas de los materiales orgánicos y la luz. Esta descripción no acredita una instalación ejecutada; confirmar autoría y datos antes de presentarlo como trabajo del estudio.',
       gallery: [
         'https://images.unsplash.com/photo-1493397212122-2b85dda8106b?auto=format&fit=crop&w=800&q=80',
         'https://images.unsplash.com/photo-1495195129352-aeb325a55b65?auto=format&fit=crop&w=800&q=80'
@@ -211,10 +229,10 @@
       title: 'UMBRAL',
       image: 'https://images.unsplash.com/photo-1431576901776-e539bd916ba2?auto=format&fit=crop&w=1400&q=80',
       category: 'Espacio expositivo',
-      location: 'Madrid, España',
-      year: '2024',
-      status: 'Completado',
-      description: 'Diseño de un espacio expositivo que redefine la experiencia del visitante. El recorrido se articula mediante umbrales —transiciones espaciales que alteran la percepción de la escala, la luz y el vacío.',
+      location: 'Por verificar',
+      year: 'Por verificar',
+      status: 'Caso conceptual de muestra; confirmar autoría, ubicación, fecha y estado antes de atribuirlo al estudio.',
+      description: 'Ejercicio conceptual de muestra sobre un espacio expositivo y las transiciones entre escala, luz y vacío. Esta descripción no acredita un espacio construido; confirmar autoría y datos antes de presentarlo como trabajo del estudio.',
       gallery: [
         'https://images.unsplash.com/photo-1431576901776-e539bd916ba2?auto=format&fit=crop&w=800&q=80',
         'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=800&q=80'
@@ -225,10 +243,10 @@
       title: 'PAISAJE INTERIOR',
       image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1400&q=80',
       category: 'Investigación espacial',
-      location: 'Lisboa, Portugal',
-      year: '2024',
-      status: 'Completado',
-      description: 'Proyecto de investigación que documenta cómo los paisajes interiores —la organización del espacio doméstico, los objetos, la luz— reflejan las formas de habitar de una cultura.',
+      location: 'Por verificar',
+      year: 'Por verificar',
+      status: 'Caso conceptual de muestra; confirmar autoría, ubicación, fecha y estado antes de atribuirlo al estudio.',
+      description: 'Ejercicio conceptual de muestra sobre la organización del espacio doméstico, los objetos y la luz. Esta descripción no acredita una investigación realizada; confirmar autoría y datos antes de presentarlo como trabajo del estudio.',
       gallery: [
         'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=800&q=80',
         'https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?auto=format&fit=crop&w=800&q=80'
@@ -239,10 +257,10 @@
       title: 'FORMA HABITADA',
       image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80',
       category: 'Diseño de interiores',
-      location: 'Valencia, España',
-      year: '2023',
-      status: 'Completado',
-      description: 'Intervención interior que transforma una vivienda existente en un espacio fluido y contemplativo. Materiales nobles, luz controlada y una paleta reducida crean un entorno que invita a la pausa.',
+      location: 'Por verificar',
+      year: 'Por verificar',
+      status: 'Caso conceptual de muestra; confirmar autoría, ubicación, fecha y estado antes de atribuirlo al estudio.',
+      description: 'Ejercicio conceptual de muestra sobre una posible intervención interior, los materiales y la luz. Esta descripción no acredita una vivienda intervenida; confirmar autoría y datos antes de presentarlo como trabajo del estudio.',
       gallery: [
         'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
         'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80'
@@ -262,7 +280,7 @@
       const image = modal.querySelector('.modal__hero-img');
       if (image) {
         image.src = data.image;
-        image.alt = data.title;
+        image.alt = 'Imagen de referencia del caso conceptual ' + data.title + '; no verificada como trabajo de ARQstudio.';
       }
       const text = {
         '.modal__number': data.number,
@@ -514,6 +532,7 @@
   const cookiePrefs = document.getElementById('cookiePrefs');
   const cookieStatus = document.getElementById('cookieStatus');
   let cookieStorageUnavailable = false;
+  let cookiePrefsTrigger = null;
 
   function getCookieConsent() {
     try {
@@ -530,6 +549,7 @@
     cookieBanner.classList.remove('cookie-banner--hidden');
     cookieBanner.classList.add('cookie-banner--visible');
     cookieBanner.setAttribute('aria-hidden', 'false');
+    cookieBanner.inert = false;
   }
 
   function hideCookieBanner() {
@@ -539,6 +559,12 @@
     window.setTimeout(function () {
       if (cookieBanner.getAttribute('aria-hidden') === 'true') {
         cookieBanner.classList.add('cookie-banner--hidden');
+        cookieBanner.inert = true;
+        if (cookieBanner.contains(document.activeElement)) {
+          if (cookiePrefsTrigger && cookiePrefsTrigger.isConnected) cookiePrefsTrigger.focus();
+          else document.activeElement.blur();
+        }
+        cookiePrefsTrigger = null;
       }
     }, reduceMotion ? 0 : 400);
   }
@@ -546,7 +572,7 @@
   function saveCookieConsent(value) {
     try {
       window.localStorage.setItem('cookie-consent', value);
-      if (cookieStatus) cookieStatus.textContent = 'Preferencia guardada en este navegador.';
+      if (cookieStatus) cookieStatus.textContent = 'Preferencia guardada en este navegador. Actualmente no activa ni bloquea servicios opcionales.';
       hideCookieBanner();
     } catch (error) {
       cookieStorageUnavailable = true;
@@ -559,6 +585,7 @@
     if (getCookieConsent()) {
       cookieBanner.classList.add('cookie-banner--hidden');
       cookieBanner.setAttribute('aria-hidden', 'true');
+      cookieBanner.inert = true;
     } else {
       showCookieBanner();
       if (cookieStorageUnavailable && cookieStatus) {
@@ -581,6 +608,7 @@
     cookiePrefs.addEventListener('click', function () {
       if (cookieStatus) cookieStatus.textContent = '';
       if (cookieBanner) {
+        cookiePrefsTrigger = cookiePrefs;
         showCookieBanner();
         if (cookieAccept) cookieAccept.focus();
       }

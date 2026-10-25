@@ -13,10 +13,10 @@
   --warm-rgb: 245, 243, 238;
   --carbon-rgb: 25, 25, 25;
 
-  --font-display: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  --font-serif: 'Cormorant Garamond', 'Georgia', serif;
-  --font-mono: 'Space Mono', 'Courier New', monospace;
+  --font-display: 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'Courier New', monospace;
 
   --fs-hero: clamp(3.5rem, 12vw, 11rem);
   --fs-display: clamp(2.5rem, 7vw, 7rem);
@@ -564,6 +564,14 @@ button {
   color: var(--concrete);
   max-width: 50ch;
   margin-top: var(--space-xs);
+}
+
+.projects__notice,
+.archive__notice {
+  max-width: 75ch;
+  margin-top: 0.75rem;
+  font-size: var(--fs-small);
+  color: var(--concrete);
 }
 
 /* -- Project Item Base -- */
@@ -1395,6 +1403,11 @@ button {
   border: 1px solid var(--carbon);
   transition: background var(--transition), color var(--transition);
   position: relative;
+}
+
+.contact__form-notice {
+  font-size: var(--fs-small);
+  color: var(--concrete);
 }
 
 .contact__submit:hover {
